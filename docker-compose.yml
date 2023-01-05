@@ -1,0 +1,17 @@
+##  Liste des différents services dockers ( containers )
+
+services:
+
+  db:
+    build:
+      context: ./PostgreSQL
+      dockerfile: Dockerfile
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRESQL_USERNAME: postgresArnaud
+      POSTGRESQL_PASSWORD: zGwgD4he37QvL7aa
+      POSTGRESQL_DATABASE: TFE
+    hostname: TFE-DB
+    container_name: TFE-DB
+
